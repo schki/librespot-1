@@ -127,7 +127,7 @@ impl Spirc {
 
         let ident = session.device_id().to_owned();
 
-        let uri = format!("hm://remote/3/user/{}/", session.username());
+        let uri = format!("hm://remote/3/user/{}/", "%23eddi");
 
         let subscription = session.mercury().subscribe(&uri as &str);
         let subscription = subscription.map(|stream| stream.map_err(|_| MercuryError)).flatten_stream();
